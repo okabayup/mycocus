@@ -1,0 +1,62 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "drum",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tanggalProduksi",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "drumLog",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "siklus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "namaLog",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "waktuLog",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "drumSetting",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "siklus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "settingUpdate",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "product",
+      "fieldPath": "kota",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}

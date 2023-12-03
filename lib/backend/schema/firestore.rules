@@ -1,0 +1,137 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == document;
+      allow delete: if false;
+    }
+
+    match /drum/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if false;
+    }
+
+    match /drum/{parent}/drumSetting/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /{path=**}/drumSetting/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /drum/{parent}/drumLog/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/drumLog/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /drum/{parent}/drumData/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/drumData/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /shop/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /shop/{parent}/product/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/product/{document} {
+      allow read: if true;
+    }
+
+
+    match /ratingProduk/{document} {
+      allow create: if request.resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /komunitas/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /dynamic_assets/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /drum/{parent}/produksi/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/produksi/{document} {
+      allow read: if true;
+    }
+
+
+    match /drum/{parent}/koreksiData/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/koreksiData/{document} {
+      allow read: if true;
+    }
+
+
+    match /drum/{parent}/drumKontrol/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/drumKontrol/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /users/{parent}/AIchat/{document} {
+      allow create: if request.auth.uid == parent;
+      allow read: if request.auth.uid == parent;
+      allow write: if request.auth.uid == parent;
+      allow delete: if false;
+    }
+  }
+}

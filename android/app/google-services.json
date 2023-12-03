@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "689981005654",
+    "project_id": "cocus-2023",
+    "storage_bucket": "cocus-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689981005654:android:62efb053f44738e67340f7",
+        "android_client_info": {
+          "package_name": "id.cocus.my"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689981005654-53e7boj5atu2f3ekt70qt4a0q84hpiuc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.cocus.my",
+            "certificate_hash": "907d22deafff94081f3a63e69ab88ec4caea9410"
+          }
+        },
+        {
+          "client_id": "689981005654-8ik58e3b5k51pn5hbsdkov5caqj9hv94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.cocus.my",
+            "certificate_hash": "4e94a9516045c02edebde1f8b16b9e6a03107fa2"
+          }
+        },
+        {
+          "client_id": "689981005654-ma7f04t1g9n2t9dnb2dhkblnljiie2j4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.cocus.my",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "689981005654-dkpq7vbcomf5pm5tml4fujb0auf7r9s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASaptVzpWKrwCPFONhBuToRZdf-Lf1ePQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689981005654-dkpq7vbcomf5pm5tml4fujb0auf7r9s5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "689981005654-cc8pvsdtegsq5eg7h8e6v5e0nnr7mrt5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.cocus.my"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
